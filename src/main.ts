@@ -1,12 +1,14 @@
-/* screenShot.js */
 // Leaflet.jsで読み込んだ地図タイルをつなぎ合わせて一枚の画像にして保存します
 // タイルレイヤーがオプション「crossOrigin: true」のもと読み込まれていることが必要
-// (c)YUUKIToriyama All rights reserved.
+// (C) 2020-2021 YUUKIToriyama All rights reserved.
 
-const takeScreenshot = async (filetype) => {
+const takeScreenshot = async (filetype: string) => {
 	// DOMを直接参照し、タイル画像のダウンロード元を調べる
 	let layerNode = document.querySelector(".leaflet-tile-container");
-	let tileNodes = layerNode.childNodes;
+	if (layerNode === null) {
+		throw Error("class .leaflet-tile-container cannot find.");
+	}
+	let tileNodes: NodeListOf<ChildNode> = layerNode.childNodes;
 
 	// タイル画像のURLを抜き出し、それらを順序よくならべる
 	let tileImgs = {};
