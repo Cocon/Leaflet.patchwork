@@ -1,0 +1,22 @@
+{
+  "name": "leaflet.patchwork",
+  "version": "0.9.0",
+  "description": "Glue raster tiles and generate one downloadable image",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cocon/Leaflet.patchwork.git"
+  },
+  "keywords": [
+    "leaflet"
+  ],
+  "author": "YUUKIToriyama <github@toriyama.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cocon/Leaflet.patchwork/issues"
+  },
+  "homepage": "https://github.com/Cocon/Leaflet.patchwork#readme"
+}
