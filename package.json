@@ -2,11 +2,11 @@
   "name": "leaflet.patchwork",
   "version": "0.9.0",
   "description": "Glue raster tiles and generate one downloadable image",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf dist",
-    "prepublishOnly": "npm run clean && npm run build",
+    "copyfiles": "cp src/style.css src/image.svg ./dist",
+    "build": "rm -rf ./dist && tsc && npm run copyfiles",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/Cocon/Leaflet.patchwork#readme",
   "devDependencies": {
+    "@types/leaflet": "^1.7.4",
+    "leaflet": "^1.7.1",
     "typescript": "^4.3.4"
   }
 }

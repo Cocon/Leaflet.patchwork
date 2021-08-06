@@ -6,7 +6,7 @@ interface TileImages {
 	[index: string]: HTMLImageElement[]
 }
 
-const takeScreenshot = async (filetype?: string) => {
+export const takeScreenshot = async (filetype?: string) => {
 	// DOMを直接参照し、タイル画像のダウンロード元を調べる
 	const layerNode: HTMLDivElement | null = document.querySelector(".leaflet-tile-container");
 	if (layerNode === null) {
@@ -64,5 +64,3 @@ const takeScreenshot = async (filetype?: string) => {
 	}
 	a.click();
 }
-
-export default takeScreenshot;
